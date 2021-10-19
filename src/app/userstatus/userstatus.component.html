@@ -1,0 +1,65 @@
+<br>
+<div class="flash">
+    <h2><span><img src="assets/images/status.png" width="40" height="40" class="d-inline-block align-top" alt=""> </span>Customer Status</h2>
+</div>
+<table class="table bg-dark crd">
+    <thead style="color: #03e9f4;">
+        <tr>
+            <th>
+                <span><img src="assets/images/Plan.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> PlanNamw
+            </th>
+            <th>
+                <span><img src="assets/images/price.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>  PlanPrice
+            </th>
+            <th>
+                <span><img src="assets/images/user1.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> CustomerName
+            </th>
+            <th>
+                <span><img src="assets/images/address.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> CustomerAddress
+            </th>
+            <th>
+                <span><img src="assets/images/phone.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> PhoneNumber
+            </th>
+            <th>
+                <span><img src="assets/images/employee.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>  WorkerName
+            </th>
+            <th>
+                <span><img src="assets/images/status.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> Status
+            </th>
+            <th>
+                <span><img src="assets/images/action.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>  Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody style="color: #8a6ea7;">
+        <tr *ngFor="let userstatus of status">
+            <td>
+                {{userstatus.planName}}
+            </td>
+            <td>
+                {{userstatus.planPrice}}
+            </td>
+            <td>
+                {{userstatus.customerName}}
+            </td>
+            <td>
+                {{userstatus.customerAddress}}
+            </td>
+            <td>
+                {{userstatus.customerPhonenumber}}
+            </td>
+            <td>
+                {{userstatus.employeeName}}
+            </td>
+            <td>
+                {{userstatus.status1}}
+            </td>
+            <td class="flash">
+                <a href="javascript:void(0);" role="button" routerLink="/home/status/{{userstatus.statusId}}"><img src="assets/images/show.png" width="25" height="25" class="d-inline-block align-top" alt=""> Show</a>
+                <a href="javascript:void(0);" role="button" (click)="cancelstatus(userstatus.statusId)"><img src="assets/images/cancel.png" width="25" height="25" class="d-inline-block align-top" alt="">Cancel</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

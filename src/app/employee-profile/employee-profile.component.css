@@ -1,0 +1,9 @@
+.c1 {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.text-n {
+    color: #8a6ea7;
+}

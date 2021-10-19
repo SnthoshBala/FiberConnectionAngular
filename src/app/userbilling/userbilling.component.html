@@ -1,0 +1,82 @@
+<br />
+<br />
+<br />
+<div class="card crd bg-dark c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Billing</h2>
+            <form #BillingForm="ngForm">
+                <div class="user-box">
+                    <input type="text" name="customerId" [(ngModel)]="bill.customerId" required hidden>
+                    <input type="text" name="planId" [(ngModel)]="bill.planId" required hidden />
+                    <input type="text" name="billingNumber" [(ngModel)]="bill.billingNumber" required hidden />
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerName" [(ngModel)]="bill.customerName" required>
+                    <label>Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerAadharNo" [(ngModel)]="bill.customerAadharNo" required>
+                    <label>Aadhar Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerAddress" [(ngModel)]="bill.customerAddress" required>
+                    <label>Address</label>
+                </div>
+                <div class="user-box">
+                    <input type="date" name="dateOfBirth" [(ngModel)]="bill.dateOfBirth" required>
+                    <label>Date of Birth</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerPhoneNumber" [(ngModel)]="bill.customerPhoneNumber" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerMailId" [(ngModel)]="bill.customerMailId" required>
+                    <label>Mail ID</label>
+                </div>
+                <div class="user-box aa">
+                    <div type="text" class="aa">Plan Name</div>
+                    <input name="planName" [(ngModel)]="bill.planName" required readonly >
+                </div>
+                <div class="user-box aa">
+                    <div type="text" class="aa">Price</div>
+                    <input name="planPrice" [(ngModel)]="bill.planPrice" required readonly >
+                </div>
+                <div class="user-box aa">
+                    <div type="text" class="aa">Payment Method</div>
+                    <input name="paymentMethod" [(ngModel)]="bill.paymentMethod" required readonly >
+                </div>
+                <div class="user-box aa">
+                    <div type="date" class="aa">Booked Date</div>
+                    <input name="bookedDate" [(ngModel)]="bill.bookedDate" required readonly >
+                </div>
+                <div class="user-box aa">
+                    <div type="text" class="aa">Tax</div>
+                    <input name="tax" [(ngModel)]="bill.tax" required readonly >
+                </div>
+                <div class="user-box aa">
+                    <div class="aa">Total</div>
+                    <input type="text" name="total" [(ngModel)]="bill.total" required readonly >
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="paybill(BillingForm.value,bill.billingNumber)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Buy
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
+                    <a href="javascript:void(0);" role="button" routerLink="/home/plan">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Back
+                    </a>
+                </span>
+            </form>
+        </div>
+    </div>
+</div>

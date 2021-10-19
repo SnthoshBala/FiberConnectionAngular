@@ -1,0 +1,50 @@
+<br />
+<br />
+<br />
+<div class="card crd bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Add Offer</h2>
+            <form #AddOffer="ngForm">
+                <div class="user-box">
+                    <input type="text" name="voot" [(ngModel)]="offer.voot" required>
+                    <label>Voot</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="lionplay" [(ngModel)]="offer.lionplay" required>
+                    <label>Lionplay</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="hungamaplay" [(ngModel)]="offer.hungamaplay" required>
+                    <label>Hungamaplay</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="ultra" [(ngModel)]="offer.ultra" required>
+                    <label>Ultra</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="hotstar" [(ngModel)]="offer.hotstar" required>
+                    <label>Hotstar</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="netflix" [(ngModel)]="offer.netflix" required>
+                    <label>Netflix</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="others" [(ngModel)]="offer.others" required>
+                    <label>Others</label>
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="addoffer(AddOffer.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Add Offer
+                </a>
+                <a routerLink="/admin/admincontrol">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

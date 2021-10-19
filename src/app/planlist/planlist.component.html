@@ -1,0 +1,57 @@
+<br />
+<div class="flash">
+    <h2>Plan List</h2>
+</div>
+<table class="table bg-dark crd">
+    <thead style="color: #03e9f4;">
+        <tr>
+            <th>
+                PlanName
+            </th>
+            <th>
+                PlanPrice
+            </th>
+            <th>
+                PlanSpeed
+            </th>
+            <th>
+                Validity
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                OfferId
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody style="color: #8a6ea7;">
+            <tr *ngFor="let plan of plandetails">
+                <td>
+                    {{plan.planName}}
+                </td>
+                <td>
+                    {{plan.planPrice}}
+                </td>
+                <td>
+                    {{plan.planSpeed}}
+                </td>
+                <td>
+                    {{plan.validity}}
+                </td>
+                <td>
+                    {{plan.image}}
+                </td>
+                <td>
+                    {{plan.offerId}}
+                </td>
+                <td class="flash">
+                    <a role="button" routerLink="/admin/plan/{{plan.planId}}">Edit</a>
+                    <a href="javascript:void(0);" role="button" (click)="plandelete(plan.planId)">Delete</a>
+                </td>
+            </tr>
+    </tbody>
+</table>

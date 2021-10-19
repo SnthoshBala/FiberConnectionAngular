@@ -1,0 +1,62 @@
+<br />
+<br />
+<br />
+<div class="card border-light bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Add New Employee</h2>
+            <form #AddEmployee="ngForm">
+                <div class="user-box">
+                    <input type="number" name="employeeId" #id="ngModel" [(ngModel)]="emp.employeeId" minlength="1" maxlength="10" required>
+                    <div class="error text-danger" *ngIf="id.invalid && id.touched">Enter valid Id</div>
+                    <label>Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="name" [(ngModel)]="emp.name" required #name="ngModel" minlength="4" maxlength="20">
+                    <div class="error text-danger" *ngIf="name.errors?.minlength || name.touched && name.invalid">User should have atleast 3 letters of name</div>
+                    <label>Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="age" [(ngModel)]="emp.age" min="18" max="100" #ag="ngModel" required >
+                    <div class="error text-danger" *ngIf="ag.touched && ag.invalid">Your Age is not Eligible</div>
+                    <div class="aa">Age</div>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="phoneNumber" [(ngModel)]="emp.phoneNumber" #phone="ngModel" minlength="10" maxlength="10" required>
+                    <div class="error text-danger" *ngIf="phone.errors?.minlength || phone.invalid && phone.touched">Phone number should be 10 digits</div>
+                    <label>Phone Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="address" [(ngModel)]="emp.address" #address="ngModel" minlength="5" maxlength="200" required>
+                    <div class="error text-danger" *ngIf="address.errors?.minlength || address.invalid && address.touched">Invalid Address</div>
+                    <label>Address</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="workLocation" [(ngModel)]="emp.workLocation" #location="ngModel" minlength="4" maxlength="20" required>
+                    <div class="error text-danger" *ngIf="location.errors?.minlength || location.touched && location.invalid">Enter Valid city</div>
+                    <label>Work Location</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="employeeMail" [(ngModel)]="emp.employeeMail" #mail="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <div class="error text-danger" *ngIf="mail.errors?.pattern || mail.touched && mail.invalid">Enter Valid Mail id</div>
+                    <label>Mail Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="employeePassword" [(ngModel)]="emp.employeePassword" #pass="ngModel" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required>
+                    <div class="error text-danger" *ngIf="pass.errors?.pattern || pass.touched && pass.invalid">Password should be 8 to 16 character should contain one number one caps letter,one special character</div>
+                    <label>Password</label>
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="addemployee(AddEmployee.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Add New Employee
+                </a>
+                <a routerLink="/admin/admincontrol">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

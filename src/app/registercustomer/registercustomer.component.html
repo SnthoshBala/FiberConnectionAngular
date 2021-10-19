@@ -1,0 +1,53 @@
+<br />
+<br />
+<br />
+<div class="card border-light bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2><span><img src="assets/images/sign-up.png" width="40" height="40" class="d-inline-block align-top" alt=""> </span>Sign Up</h2>
+            <form  #RegisterUserForm="ngForm" >
+                <div class="user-box">
+                    <input type="text" name="customerName" [(ngModel)]="cust.customerName" #name="ngModel" minlength="3" maxlength="20" required>
+                    <div class="error text-danger" *ngIf="name.errors?.minlength || name.touched && name.invalid">User should have atleast 3 letters of name</div>
+                    <label><span><img src="assets/images/user1.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="date" name="dateOfBirth" [(ngModel)]="cust.dateOfBirth"  required autofocus> 
+                    <label><span><img src="assets/images/dob.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Date of Birth</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerAadharNo" [(ngModel)]="cust.customerAadharNo" #aadhar="ngModel" minlength="16" maxlength="16" required>
+                    <div class="error class-danger" *ngIf="aadhar.errors?.minlength || aadhar.invalid && aadhar.touched">Aadhar should 16 characters</div>
+                    <label><span><img src="assets/images/aadhar.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Aadhar Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerAddress" [(ngModel)]="cust.customerAddress" #address="ngModel" minlength="5" maxlength="200" required>
+                    <div class="error text-danger" *ngIf="address.errors?.minlength || address.invalid && address.touched">Invalid Address</div>
+                    <label><span><img src="assets/images/address.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Address</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerPhoneNumber" [(ngModel)]="cust.customerPhoneNumber" #phone="ngModel" minlength="10" maxlength="10" required>
+                    <div class="error text-danger" *ngIf="phone.errors?.minlength || phone.invalid && phone.touched">Phone number should be 10 digits</div>
+                    <label><span><img src="assets/images/phone.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Phone Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerMailId" [(ngModel)]="cust.customerMailId" #mail="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <div class="error text-danger" *ngIf="mail.errors?.pattern || mail.touched && mail.invalid">Enter Valid Mail id</div>
+                    <label><span><img src="assets/images/mail.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Mail Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="customerPassword" [(ngModel)]="cust.customerPassword" #pass="ngModel" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required>
+                    <label><span><img src="assets/images/password.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Password</label>
+                    <div class="error text-danger" *ngIf="pass.errors?.pattern || pass.touched && pass.invalid">Password should be 8 to 16 character should contain one number one caps letter,one special character</div>
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="postcustomer_api(RegisterUserForm.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <img src="assets/images/sign-up.png" width="25" height="25" class="d-inline-block align-top" alt=""> Sign Up
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

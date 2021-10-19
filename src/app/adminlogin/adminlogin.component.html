@@ -1,0 +1,32 @@
+<br />
+<br />
+<br />
+<div class="card crd bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2><span><img src="assets/images/adminname.png" width="40" height="40" class="d-inline-block align-top" alt=""> </span>Admin Login</h2>
+            <form #AdminLogin="ngForm">
+                <div class="user-box">
+                    <input #adminname="ngModel" type="text" name="adminUsername" [(ngModel)]="admin.adminUsername" minlength="3" maxlength="10" required>
+                    <div class="error text-danger" *ngIf="adminname.errors?.minlength || adminname.touched && adminname.invalid">Enter Valid Name</div>
+                    <label><span><img src="assets/images/adminname.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Admin Name</label>
+                </div>
+                <div class="user-box">
+                    <input #pass="ngModel" type="password" name="adminPassword" [(ngModel)]="admin.adminPassword" required>
+                    <div class="error text-danger" *ngIf="pass.touched && pass.invalid">Enter the password</div>
+                    <label><span><img src="assets/images/adminpass.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span>Admin Password</label>
+                </div>
+                <div class="error text-danger" *ngIf="invalidlogin">
+                    Invalid User name or Password 
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="login(AdminLogin.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <img src="assets/images/login.png" width="25" height="25" class="d-inline-block align-top" alt=""> Login
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

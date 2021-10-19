@@ -1,0 +1,61 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transperant text-black-50">
+        <a class="navbar-brand" asp-controller="Fiber" asp-action="PlanDetails">
+            <span><img src="assets/images/Logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> </span>
+            FlixFiber
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a role="button" class="nav-link tcolor" routerLink='/home/plan'>Home</a>
+                </li>
+                <ng-container *ngIf="IsAuthendicated();else other">
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink='/home/status'>Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink="/home/profile" >{{username}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" (click)="Logout()">Logout</a>
+                    </li>
+                </ng-container>
+                <ng-template #other>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink='/home/login'>Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink="/home/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink="/home/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink="/admin/login">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link tcolor" routerLink="/employee/login" >Employee</a>
+                    </li>
+                </ng-template>
+            </ul>
+            <span>  </span>
+            <span>  </span>
+            <span>  </span>
+            <span>   </span>
+        </div>
+    </nav>
+</header>
+<div class="container">
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>
+</div>
+<footer class="border-top footer text-muted bg-transparent ">
+    <div class="container text-dark">
+        &copy; 2021 - FlixFiber - <a routerLink="dummy">Privacy</a>
+    </div>
+</footer>

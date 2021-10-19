@@ -1,0 +1,54 @@
+<br />
+<br />
+<br />
+<div class="card crd bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Edit Offer</h2>
+            <form #EditOffer="ngForm">
+                <div class="user-box">
+                    <input name="offerId" [(ngModel)]="offer.offerId" required>
+                    <label>Id</label>
+                </div>
+                <div class="user-box">
+                    <input name="voot" [(ngModel)]="offer.voot" required>
+                    <label>Voot</label>
+                </div>
+                <div class="user-box">
+                    <input name="lionplay" [(ngModel)]="offer.lionplay" required>
+                    <label>Lionplay</label>
+                </div>
+                <div class="user-box">
+                    <input name="hungamaplay" [(ngModel)]="offer.hungamaplay" required>
+                    <label>Hungamaplay</label>
+                </div>
+                <div class="user-box">
+                    <input name="ultra" [(ngModel)]="offer.ultra" required>
+                    <label>Ultra</label>
+                </div>
+                <div class="user-box">
+                    <input name="hotstar" [(ngModel)]="offer.hotstar" required>
+                    <label>Hotstar</label>
+                </div>
+                <div class="user-box">
+                    <input name="netflix" [(ngModel)]="offer.netflix" required>
+                    <label>Netflix</label>
+                </div>
+                <div class="user-box">
+                    <input name="others" [(ngModel)]="offer.others" required>
+                    <label>Others</label>
+                </div>
+                <a href="javascript:void(0);" role="button" (click)="editOffer(offer.offerId,EditOffer.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Edit
+                </a>
+                <a routerLink="/admin/offer">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

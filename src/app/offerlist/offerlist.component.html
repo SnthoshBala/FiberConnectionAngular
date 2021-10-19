@@ -1,0 +1,70 @@
+
+<br />
+<div class="flash">
+    <h2>Offer Details</h2>
+</div>
+<table class="table bg-dark crd">
+    <thead style="color: #03e9f4;">
+        <tr>
+            <th>
+                OfferId
+            </th>
+            <th>
+                Voot
+            </th>
+            <th>
+                Lionplay
+            </th>
+            <th>
+                Hungamaplay
+            </th>
+            <th>
+                Ultra
+            </th>
+            <th>
+                Hotstar
+            </th>
+            <th>
+                Netflix
+            </th>
+            <th>
+                Others
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody style="color: #8a6ea7;">
+            <tr *ngFor="let offer of offers">
+                <td>
+                    {{offer.offerId}}
+                </td>
+                <td>
+                    {{offer.voot}}
+                </td>
+                <td>
+                    {{offer.lionplay}}
+                </td>
+                <td>
+                    {{offer.hungamaplay}}
+                </td>
+                <td>
+                    {{offer.ultra}}
+                </td>
+                <td>
+                    {{offer.hotstar}}
+                </td>
+                <td>
+                    {{offer.netflix}}
+                </td>
+                <td>
+                    {{offer.others}}
+                </td>
+                <td class="flash">
+                    <a routerLink="/admin/offer/{{offer.offerId}}">Update</a>
+                    <a  href="javascript:void(0);" role="button" (click)="deleteOffer(offer.offerId)" >Delete</a>
+                </td>
+            </tr>
+    </tbody>
+</table>

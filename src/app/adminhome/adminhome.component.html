@@ -1,0 +1,70 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <a class="navbar-brand" asp-controller="Admin" asp-action="AdminControl">
+            <span><img src="assets/images/Logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> </span>
+            FlixFiber Admin Control
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <ng-container *ngIf="IsAuthendicated();else other">
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/admincontrol" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/plan">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/offer">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/employeelist">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/addemployee">Add Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/customerlist">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" (click)="Logout()">Logout</a>
+                    </li>
+                </ng-container>
+                <ng-template #other>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/home/plan" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/login">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/login">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/login">Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/login">Add Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/admin/login">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a role="button" class="nav-link text-dark" routerLink="/home/login" >UserLogin</a>
+                    </li>
+                </ng-template>
+            </ul>
+        </div>
+    </nav>
+</header>
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>
+<footer class="border-top footer text-muted bg-transparent ">
+    <div class="container text-dark">
+        &copy; 2021 - FlixFiber - <a routerLink="dummy">Privacy</a>
+    </div>
+</footer>

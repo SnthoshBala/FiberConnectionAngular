@@ -1,0 +1,68 @@
+<br />
+<div class="flash">
+    <h2>Employee List</h2>
+</div>
+<table class="table bg-dark crd">
+    <thead style="color: #03e9f4;">
+        <tr>
+            <th>
+                EmployeeId
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                WorkLocation
+            </th>
+            <th>
+                PhoneNumber
+            </th>
+            <th>
+                EmployeeMail
+            </th>
+            <th>
+                EmployeePassword
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody style="color: #8a6ea7;">
+            <tr *ngFor="let employee of emp">
+                <td>
+                    {{employee.employeeId}}
+                </td>
+                <td>
+                    {{employee.name}}
+                </td>
+                <td>
+                    {{employee.age}}
+                </td>
+                <td>
+                    {{employee.address}}
+                </td>
+                <td>
+                    {{employee.workLocation}}
+                </td>
+                <td>
+                    {{employee.phoneNumber}}
+                </td>
+                <td>
+                    {{employee.employeeMail}}
+                </td>
+                <td>
+                    {{employee.employeePassword}}
+                </td>
+                <td class="flash">
+                    <a  role="button" routerLink="/admin/edit/{{employee.employeeId}}">Update</a>
+                </td>
+            </tr>
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+<br />
+<br />
+<br />
+<div class="card crd bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Edit Plan</h2>
+            <form #PlanForm="ngForm">
+                <div class="user-box">
+                    <input type="text" name="planId" [(ngModel)]="plan.planId" required>
+                    <label>Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planName" [(ngModel)]="plan.planName" required>
+                    <label>Plan Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planPrice" [(ngModel)]="plan.planPrice" required>
+                    <label>Plan Price</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planSpeed" [(ngModel)]="plan.planSpeed" required>
+                    <label>Speed</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="validity" [(ngModel)]="plan.validity" required>
+                    <label>Validity</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="offerId" [(ngModel)]="plan.offerId" required>
+                    <label>OfferId</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="image" [(ngModel)]="plan.image" required>
+                    <label>Image</label>
+                </div>
+                <a href="javascript:void(0);" (click)="editplan(PlanForm.value,plan.planId)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Edit
+                </a>
+                <a asp-action="AdminControlPlanDetails">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

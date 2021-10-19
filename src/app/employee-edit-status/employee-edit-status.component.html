@@ -1,0 +1,71 @@
+<br />
+<br />
+<br />
+<div class="card border-light bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Get Work</h2>
+            <form #StatusForm="ngForm">
+                <div class="user-box">
+                    <input type="text" name="statusId" [(ngModel)]="stat.statusId"  required>
+                    <label>StatusId</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="status1" [(ngModel)]="stat.status1" required autofocus>
+                    <label>Status</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="employeeId" [(ngModel)]="stat.employeeId"  required>
+                    <label>EmployeeId</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerId" [(ngModel)]="stat.customerId"  required>
+                    <label>Customer Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planId" [(ngModel)]="stat.planId"  required>
+                    <label>Plan Id</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planName" [(ngModel)]="stat.planName" required>
+                    <label>Plan Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="planPrice" [(ngModel)]="stat.planPrice" required>
+                    <label>Plan Price</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="billingNumber" [(ngModel)]="stat.billingNumber" required>
+                    <label>Billing Number</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerName" [(ngModel)]="stat.customerName"  required>
+                    <label>Customer Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerAddress" [(ngModel)]="stat.customerAddress" required>
+                    <label>Customer Address</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="customerPhonenumber" [(ngModel)]="stat.customerPhonenumber" required>
+                    <label>Customer PhoneNumber</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="employeeName" [(ngModel)]="stat.employeeName" required>
+                    <label>Employee Name</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="employeePhonenumber" [(ngModel)]="stat.employeePhonenumber" required>
+                    <label>Employee Phonenumber</label>
+                </div>
+                <a href="javascript:void(0);" (click)="editStatus(stat.statusId,StatusForm.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Confirm Work
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<br />
+<div class="flash">
+    <h2>Booking Status</h2>
+</div>
+<table class="table table-responsive bg-dark crd">
+    <thead style="color: #03e9f4;">
+        <tr>
+            <th>
+                CustomerId
+            </th>
+            <th>
+                CustomerName
+            </th>
+            <th>
+                DateOfBirth
+            </th>
+            <th>
+                CustomerAddress
+            </th>
+            <th>
+                CustomerPhoneNumber
+            </th>
+            <th>
+                CustomerAadharNo
+            </th>
+            <th>
+                CustomerMailId
+            </th>
+            <th>
+                CustomerPassword
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody style="color: #8a6ea7;">
+            <tr *ngFor="let cust of customer">
+                <td>
+                    {{cust.customerId}}
+                </td>
+                <td>
+                    {{cust.customerName}}
+                </td>
+                <td>
+                    {{cust.dateOfBirth | date : 'yyyy-MM-dd'}}
+                </td>
+                <td>
+                    {{cust.customerAddress}}
+                </td>
+                <td>
+                    {{cust.customerPhoneNumber}}
+                </td>
+                <td>
+                    {{cust.customerAadharNo}}
+                </td>
+                <td>
+                    {{cust.customerMailId}}
+                </td>
+                <td>
+                    {{cust.customerPassword}}
+                </td>
+            </tr>
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+<br />
+<br />
+<br />
+<div class="card border-light crd bg-dark mb-3 c1" style="max-width: 30rem;">
+    <div class="card-body">
+        <div class="login-box">
+            <h2>Profile Edit</h2>
+            <form #ProfileEdit="ngForm">
+                <div class="user-box">
+                    <input name="customerId" [(ngModel)]="user.customerId" hidden>
+                </div>
+                <div class="user-box">
+                    <input name="customerName" [(ngModel)]="user.customerName"  required>
+                    <label>Name</label>
+                </div>
+                <div class="user-box">
+                    <input name="customerPhonenumber" [(ngModel)]="user.customerPhoneNumber" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="user-box">
+                    <input name="customerAadharNo" [(ngModel)]="user.customerAadharNo" required>
+                    <label>Aadhar Number</label>
+                </div>
+                <div class="user-box">
+                    <input name="customerAddress" [(ngModel)]="user.customerAddress" required>
+                    <label>Address</label>
+                </div>
+                <div class="user-box">
+                    <input name="dateOfBirth" [(ngModel)]="user.dateOfBirth" required>
+                    <label>DOB</label>
+                </div>
+                <div class="user-box">
+                    <input name="customerMailId" [(ngModel)]="user.customerMailId" required>
+                    <label>Mail ID</label>
+                </div>
+                <div class="user-box">
+                    <input name="customerPassword" [(ngModel)]="user.customerPassword" hidden required>
+                </div>
+                <a role="button" href="javascript:void(0);" (click)="editprofile(user.customerId,ProfileEdit.value)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Update
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

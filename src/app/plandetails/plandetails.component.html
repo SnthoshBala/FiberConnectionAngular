@@ -1,0 +1,63 @@
+<br />
+<div class="flash">
+    <h2 style="color: snow;"><img src="assets/images/Plan.png" width="40" height="40" class="d-inline-block align-top" alt=""> PlanDetails</h2>
+</div>
+<div class="container mt-5 mb-3 ">
+    <div class="row">
+        <div *ngFor="let plandetails of plan">
+            <div class="col-md-4">
+                <div class="card text-white crd bg-dark" style="width: 18rem;">
+                    <img class="card-img-top" style="width:285px;height:200px;border-radius:20px;" src="assets/{{plandetails.image}}">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h5 class="card-title">{{plandetails.planName}}</h5>
+                        </div>
+                        <div class="text-center">
+                            <h6 class="card-text tcolor"><span><img src="assets/images/speed1.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> Plan Speed: <span class="text-white">{{plandetails.planSpeed}}</span></h6>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <h6 class="card-text tcolor"><span><img src="assets/images/validity.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> Plan Validity: <span class="text-white">{{plandetails.validity}}</span></h6>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <h6 class="card-text tcolor"><span><img src="assets/images/price.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> Plan Price: <span class="text-white">{{plandetails.planPrice}}</span></h6>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <h6 class="card-text tcolor"><span><img src="assets/images/wifi.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> Unlimted</h6>
+                        </div>
+                        <br />
+                        <div class="text-center">
+                            <h6 class="card-text tcolor"><span><img src="assets/images/free.png" width="25" height="25" class="d-inline-block align-top" alt=""> </span> 24*7 std/isd Free</h6>
+                        </div>
+                        <br />
+                        <div class="text-center card-footer border-white flash">
+                            <a role="button" class="btn btn-outline-light" routerLink="/home/offers/{{plandetails.offerId}}"><img src="assets/images/Offer.png" width="40" height="40" class="d-inline-block align-top" alt=""></a>
+                        </div>
+                        <br />
+                        <div class="text-center card-footer border-white flash">
+                            <ng-container *ngIf="IsAuthendicated();else normal">
+                                <a role="button" (click)="requestbill(plandetails.planId)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Buy
+                                </a>
+                            </ng-container>
+                            <ng-template #normal>
+                                <a role="button" routerLink="/home/login">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Buy
+                                </a>
+                            </ng-template>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
