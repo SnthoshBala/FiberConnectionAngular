@@ -8,7 +8,7 @@ import { FiberPlan } from 'src/Models/FiberPlan';
 })
 export class FiberplanService {
 
-  req:string="https://fiberplanapiteam3.azurewebsites.net/api/Fiber";
+  req:string="https://localhost:44393/api/Fiber";
   constructor(private http:HttpClient) { }
   getFiberPlan():Observable<FiberPlan[]>
   {

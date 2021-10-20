@@ -9,7 +9,7 @@ import { Status } from 'src/Models/Status';
 })
 export class StatusService {
 
-  req:string="https://statusapiteam3.azurewebsites.net/api/Status";
+  req:string="https://localhost:44396/api/Status";
   constructor(private http:HttpClient) { }
 
   userStatus(id:number):Observable<Status[]>

@@ -8,12 +8,12 @@ import { Employee } from 'src/Models/Employee';
 })
 export class EmployeeService {
 
-  req="https://employeeapi3.azurewebsites.net/api/Employee"
+  req="https://localhost:44322/api/Employee"
   constructor(private http:HttpClient) { }
 
   tokenEmployee(emp:Employee):Observable<any>
   {
-    return this.http.post("https://authorizationapiteam3.azurewebsites.net/api/Authorization/EmployeeLogin",emp,
+    return this.http.post("https://localhost:44378/api/Authorization/EmployeeLogin",emp,
     {
       headers: new HttpHeaders({
         'Content-Type':'application/json;charset=UTF-8',

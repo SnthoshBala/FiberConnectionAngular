@@ -8,7 +8,7 @@ import { Customer } from 'src/Models/Customer';
 })
 export class CustomerService {
 
-  req:string="https://customerapiteam3.azurewebsites.net/api/Customer";
+  req:string="https://localhost:44320/api/Customer";
   constructor(private http:HttpClient) { }
   registerCustomer(cust:Customer):Observable<any>
   {
@@ -23,7 +23,7 @@ export class CustomerService {
   }
   tokenCustomer(cust:Customer):Observable<any>
   {
-    return this.http.post("https://authorizationapiteam3.azurewebsites.net/api/Authorization/CustomerLogin",cust,
+    return this.http.post("https://localhost:44378/api/Authorization/CustomerLogin",cust,
     {
       headers: new HttpHeaders({
         'Content-Type':'application/json;charset=UTF-8',

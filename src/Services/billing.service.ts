@@ -8,7 +8,7 @@ import { Billing } from 'src/Models/Billing';
 })
 export class BillingService {
 
-  req:string="https://billingapiteam3.azurewebsites.net/api/Billing";
+  req:string="https://localhost:44313/api/Billing";
   constructor(private http:HttpClient) { }
 
   reqbill(bill:Billing,id:number,c_id:number):Observable<number>

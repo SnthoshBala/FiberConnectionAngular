@@ -8,7 +8,7 @@ import { Offer } from 'src/Models/Offer';
 })
 export class OfferService {
 
-  req:string="https://offersapiteam3.azurewebsites.net/api/Offer";
+  req:string="https://localhost:44341/api/Offer";
   constructor(private http:HttpClient) { }
   OfferById(id:number):Observable<Offer>
   {

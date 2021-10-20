@@ -8,7 +8,7 @@ import { Admin } from 'src/Models/Admin';
 })
 export class AdminService {
 
-  req:string="https://authorizationapiteam3.azurewebsites.net/api/Authorization/AdminLogin";
+  req:string="https://localhost:44378/api/Authorization/AdminLogin";
   constructor(private http:HttpClient) { }
   getadmintoken(admin:Admin):Observable<any>
   {
